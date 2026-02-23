@@ -5,14 +5,14 @@ export default function ProjectsPage() {
     {
       id: 'citypulse',
       title: "CityPulseAI",
-      stack: "DATA SCIENCE | MACHINE LEARNING",
+      stack: "Next.Js | SupaBase",
       desc: "ניתוח נתונים מוניציפליים מבוסס מודלים לחיזוי לשיפור שירותים עירוניים.",
       img: "/citypulse-card.png"
     },
     {
       id: 'smartstock',
       title: "SmartStock",
-      stack: "LOGISTICS | WEB APP",
+      stack: "Python | MySQL | Logistics",
       desc: "מערכת ניהול מלאי מתקדמת המשלבת אוטומציית הזמנות ומעקב מלאי בזמן אמת.",
       img: "/smartstock-card.png"
     },
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
     {
       id: 'shiftwise',
       title: "ShiftWise AI",
-      stack: "PYTHON | OPTIMIZATION",
+      stack: "PYTHON | SupaBase",
       desc: "אלגוריתם חכם לאופטימיזציית סידורי עבודה המאזן בין אילוצים עסקיים והעדפות עובדים.",
       img: "/shiftwise-card.png"
     }
