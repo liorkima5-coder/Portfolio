@@ -10,9 +10,9 @@ export default function Home() {
           Data Scientist & BI Developer
         </div>
 
-        {/* כותרת מרכזית עבה */}
         <h1 className="text-[3.5rem] md:text-[4.5rem] font-[900] text-[#0f172a] leading-[1.1] mb-8 tracking-tight">
-          פתרונות טכנולוגיים<br />לארגונים חכמים
+          פתרונות Data & BI<br />
+        <span className="text-[#2563eb]">מקצה לקצה</span>
         </h1>
 
         {/* תת-כותרת דקה */}
