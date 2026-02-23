@@ -7,7 +7,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center text-center pt-24 pb-16 px-6">
         {/* Tag עליון */}
         <div className="bg-[#eff6ff] text-[#2563eb] px-5 py-1.5 rounded-md text-sm font-bold mb-8 border border-[#dbeafe] tracking-wide uppercase">
-          Engineering & Development
+          Data Scientist & BI Developer
         </div>
 
         {/* כותרת מרכזית עבה */}
