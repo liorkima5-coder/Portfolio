@@ -6,7 +6,7 @@ const rubik = Rubik({ subsets: ['hebrew', 'latin'] });
 
 // הגדרת המטא-דאטה והלוגו בלשונית (Favicon)
 export const metadata = {
-  title: 'Lior Kima | Solutions',
+  title: 'Lior Kima | Portfolio',
   description: 'פתרונות טכנולוגיים לארגונים חכמים',
   icons: {
     // מצביע לקובץ logo.png שנמצא בתוך תיקיית public
