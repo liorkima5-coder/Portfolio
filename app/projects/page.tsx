@@ -29,6 +29,14 @@ export default function ProjectsPage() {
       stack: "PYTHON | SupaBase",
       desc: "אלגוריתם חכם לאופטימיזציית סידורי עבודה המאזן בין אילוצים עסקיים והעדפות עובדים.",
       img: "/shiftwise-card.png"
+    },
+    // הפרויקט החדש שהוספנו
+    {
+      id: 'dss-opti',
+      title: "מערכת תומכת החלטה (DSS)",
+      stack: "Python | Optimization | OR",
+      desc: "מערכת אופטימיזציה מתקדמת המבוססת על מודלים מתמטיים לשיפור יעילות תפעולית וניהול משאבים.",
+      img: "/dss-card.png" // וודא שיש קובץ כזה בתיקיית public
     }
   ];
 
