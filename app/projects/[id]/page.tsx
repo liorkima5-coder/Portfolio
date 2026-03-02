@@ -25,10 +25,9 @@ interface MultiProject {
   projects: SubProject[];
 }
 
-// איחוד הסוגים ל-Type אחד שהקוד יזהה
 type ProjectType = SingleProject | MultiProject;
 
-// 2. אובייקט הנתונים המעודכן עם שמות הקבצים ל-Public
+// 2. אובייקט הנתונים המעודכן
 const projectDetails: Record<string, ProjectType> = {
   citypulse: {
     title: "CityPulseAI",
@@ -40,6 +39,20 @@ const projectDetails: Record<string, ProjectType> = {
       "בניית ממשק אינטראקטיבי לקבלת החלטות מבוססות דאטה ב-Vercel."
     ],
     url: "https://city-pulse-ai-two.vercel.app/",
+    isMulti: false
+  },
+  // פרויקט ה-DSS החדש
+  "dss-opti": {
+    title: "מערכת תומכת החלטה (DSS) לאופטימיזציה תפעולית",
+    fullImg: "/dss-card.png",
+    description: "פיתוח כלי ניהולי מתקדם המבוסס על מודלים מתמטיים של חקר ביצועים (OR) לקבלת החלטות אופטימליות בארגונים.",
+    tasks: [
+      "מידול מתמטי של בעיות הקצאת משאבים תחת אילוצים (Optimization Models).",
+      "ביצוע ניתוחי רגישות (Sensitivity Analysis) לבחינת השפעת שינויים בפרמטרי השוק.",
+      "פיתוח ממשק משתמש ב-Python המאפשר למנהלים לבצע סימולציות 'What-if' באופן עצמאי.",
+      "הטמעת אלגוריתמים לשיפור היעילות התפעולית וצמצום עלויות בשרשרת הערך."
+    ],
+    url: "https://liorkima5-coder-dss.streamlit.app/", // הלינק לפרויקט ה-DSS
     isMulti: false
   },
   bi: {
