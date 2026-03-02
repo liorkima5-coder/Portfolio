@@ -52,7 +52,7 @@ const projectDetails: Record<string, ProjectType> = {
       "פיתוח ממשק משתמש ב-Python המאפשר למנהלים לבצע סימולציות 'What-if' באופן עצמאי.",
       "הטמעת אלגוריתמים לשיפור היעילות התפעולית וצמצום עלויות בשרשרת הערך."
     ],
-    url: "https://liorkima5-coder-dss.streamlit.app/", // הלינק לפרויקט ה-DSS
+    url: "https://municipal-dss.vercel.app/", // הלינק לפרויקט ה-DSS
     isMulti: false
   },
   bi: {
