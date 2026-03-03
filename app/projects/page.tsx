@@ -52,7 +52,7 @@ export default function ProjectsPage() {
       <div className="max-w-[1200px] mx-auto px-6">
         
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-[900] text-slate-900 mb-4">פורטפוליו פרויקטים</h2>
+          <h2 className="text-3xl md:text-4xl font-[900] text-slate-900 mb-4">פרויקטים נבחרים</h2>
           <p className="text-slate-500 text-base md:text-lg font-light max-w-2xl mx-auto italic">
             פתרונות הנדסיים המשלבים פיתוח תוכנה, אופטימיזציה וניתוח נתונים מתקדם.
           </p>
