@@ -89,7 +89,7 @@ export default function ProjectsPage() {
                 </p>
                 
                 <div className="mt-auto flex items-center text-slate-900 font-black text-xs gap-3 group-hover:gap-5 transition-all">
-                  <span className="uppercase tracking-widest">צפייה במקרה בוחן</span>
+                  <span className="uppercase tracking-widest">צפייה בפרויקט</span>
                   <span className="text-blue-600">←</span>
                 </div>
               </div>
