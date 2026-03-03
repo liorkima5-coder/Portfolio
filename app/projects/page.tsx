@@ -8,7 +8,7 @@ export default function ProjectsPage() {
       title: "ClinicPro Enterprise",
       stack: "Next.js | TiDB | BI Analytics",
       desc: "מערכת SaaS מתקדמת לניהול מרפאות המשלבת דשבורדים של BI, מעקב מדדי BMI וניהול פיננסי בזמן אמת.",
-      img: "/Clinic.png" // הלוגו שהעלינו לתיקיית public
+      img: "/Clinic.png" // הלוגו שהעלינו לתיקיית 
     },
     {
       id: 'citypulse',
