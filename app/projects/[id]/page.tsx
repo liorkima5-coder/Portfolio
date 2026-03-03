@@ -27,8 +27,22 @@ interface MultiProject {
 
 type ProjectType = SingleProject | MultiProject;
 
-// 2. אובייקט הנתונים המעודכן
+// 2. אובייקט הנתונים המעודכן כולל ClinicPro
 const projectDetails: Record<string, ProjectType> = {
+  clinicpro: {
+    title: "ClinicPro Enterprise - BI & Healthcare Management",
+    fullImg: "/logo.png", // וודא שיש לך צילום מסך של הדשבורד בתיקיית public
+    description: "פיתוח מערכת SaaS מקיפה לניהול מרפאות, המשלבת ניתוח נתונים מתקדם (BI), מעקב מדדים פיזיולוגיים וניהול יומן תורים חכם.",
+    tasks: [
+      "בניית ארכיטקטורת Full-Stack מבוססת Next.js 15 ו-TiDB Serverless לאחסון נתונים רפואיים.",
+      "פיתוח דשבורד BI למנהלי מערכת הכולל ויזואליזציה של הכנסות לפי מרפאה ועומסי עבודה בזמן אמת.",
+      "הטמעת אלגוריתם לחישוב מדדי BMI ופרופיל בריאותי אינטראקטיבי עבור מטופלים.",
+      "עיצוב ממשק משתמש (UI/UX) מודרני בשיטת Glassmorphism עם תמיכה מלאה ב-RTL.",
+      "פיתוח מנגנון ניהול פיננסי למטפלים המאפשר מעקב הכנסות מצטברות לפי תעריפים אישיים."
+    ],
+    url: "https://clinic-pro-omega.vercel.app/",
+    isMulti: false
+  },
   citypulse: {
     title: "CityPulseAI",
     fullImg: "/citypulse-card.png",
@@ -41,7 +55,6 @@ const projectDetails: Record<string, ProjectType> = {
     url: "https://city-pulse-ai-two.vercel.app/",
     isMulti: false
   },
-  // פרויקט ה-DSS החדש
   "dss-opti": {
     title: "מערכת תומכת החלטה (DSS) לאופטימיזציה תפעולית",
     fullImg: "/dss-card.png",
@@ -52,7 +65,7 @@ const projectDetails: Record<string, ProjectType> = {
       "פיתוח ממשק משתמש ב-Python המאפשר למנהלים לבצע סימולציות 'What-if' באופן עצמאי.",
       "הטמעת אלגוריתמים לשיפור היעילות התפעולית וצמצום עלויות בשרשרת הערך."
     ],
-    url: "https://municipal-dss.vercel.app/", // הלינק לפרויקט ה-DSS
+    url: "https://municipal-dss.vercel.app/",
     isMulti: false
   },
   bi: {
@@ -117,7 +130,7 @@ export default function ProjectPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white py-12 px-6">
+    <main className="min-h-screen bg-white py-12 px-6" dir="rtl">
       <div className="max-w-4xl mx-auto">
         {/* כפתור חזרה */}
         <Link href="/projects" className="group text-blue-600 font-bold flex items-center gap-2 mb-10 no-underline">
@@ -126,9 +139,8 @@ export default function ProjectPage() {
         </Link>
 
         {project.isMulti ? (
-          /* תצוגה לפרויקט BI */
           project.projects.map((sub, index) => (
-            <div key={index} className="mb-20 border-b border-slate-100 pb-16 last:border-0 text-right">
+            <div key={index} className="mb-20 border-b border-slate-100 pb-16 last:border-0 text-right italic">
               <h1 className="text-3xl font-black text-slate-900 mb-6">{sub.title}</h1>
               <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-lg mb-8">
                 <img src={sub.img} alt={sub.title} className="w-full h-auto" />
@@ -138,7 +150,7 @@ export default function ProjectPage() {
                   <i className="fa-solid fa-list-check text-blue-600"></i>
                   היבטים מקצועיים בביצוע
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-4 font-medium opacity-90">
                   {sub.tasks.map((task, i) => (
                     <li key={i} className="flex gap-3 items-start justify-start">
                       <i className="fa-solid fa-check text-blue-600 mt-1.5 text-sm"></i>
@@ -147,7 +159,7 @@ export default function ProjectPage() {
                   ))}
                 </ul>
                 <div className="mt-10">
-                  <a href={sub.url} download className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-600 transition-all">
+                  <a href={sub.url} download className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-3.5 rounded-xl font-black hover:bg-blue-600 transition-all italic text-sm">
                     <i className="fa-solid fa-file-pdf"></i>
                     הורדת ניתוח פרויקט מלא
                   </a>
@@ -156,30 +168,33 @@ export default function ProjectPage() {
             </div>
           ))
         ) : (
-          /* תצוגה לפרויקט רגיל */
-          <div className="text-right">
-            <h1 className="text-4xl font-[900] text-slate-900 mb-6 leading-tight">{project.title}</h1>
-            <p className="text-xl text-slate-500 mb-10 font-light leading-relaxed">{project.description}</p>
+          <div className="text-right italic">
+            <h1 className="text-5xl font-black text-slate-900 mb-6 leading-tight tracking-tighter uppercase">
+               {project.title}
+            </h1>
+            <p className="text-xl text-slate-400 mb-10 font-bold leading-relaxed opacity-80">
+               {project.description}
+            </p>
             
-            <div className="rounded-[2rem] overflow-hidden border border-slate-200 shadow-2xl mb-12">
+            <div className="rounded-[3rem] overflow-hidden border border-slate-200 shadow-2xl mb-12">
               <img src={project.fullImg} alt={project.title} className="w-full h-auto" />
             </div>
 
-            <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100">
-              <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+            <div className="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100">
+              <h3 className="text-2xl font-black mb-8 flex items-center gap-4 text-slate-900 uppercase">
                 <i className="fa-solid fa-gears text-blue-600"></i>
-                מתודולוגיה וביצוע
+                מתודולוגיה וביצוע הנדסי
               </h3>
-              <ul className="space-y-5">
+              <ul className="space-y-6">
                 {project.tasks.map((task, i) => (
-                  <li key={i} className="flex gap-4 items-start justify-start">
-                    <i className="fa-solid fa-circle-check text-blue-600 mt-1.5"></i>
-                    <span className="text-slate-700 text-lg leading-relaxed">{task}</span>
+                  <li key={i} className="flex gap-5 items-start justify-start">
+                    <i className="fa-solid fa-circle-check text-blue-600 mt-1.5 shadow-sm rounded-full"></i>
+                    <span className="text-slate-700 text-lg leading-relaxed font-medium opacity-90">{task}</span>
                   </li>
                 ))}
               </ul>
-              <div className="mt-12 text-center">
-                <a href={project.url} target="_blank" className="inline-flex items-center gap-3 bg-blue-600 text-white px-12 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-blue-200 shadow-lg">
+              <div className="mt-14 text-center">
+                <a href={project.url} target="_blank" className="inline-flex items-center gap-4 bg-slate-900 text-white px-14 py-5 rounded-2xl font-black text-xl hover:bg-blue-600 transition-all shadow-xl shadow-slate-200 uppercase tracking-tight">
                   כניסה לפרויקט אונליין
                   <i className="fa-solid fa-external-link text-sm"></i>
                 </a>
