@@ -30,9 +30,9 @@ type ProjectType = SingleProject | MultiProject;
 // 2. אובייקט הנתונים המעודכן כולל ClinicPro
 const projectDetails: Record<string, ProjectType> = {
   clinicpro: {
-    title: "ClinicPro Enterprise - BI & Healthcare Management",
-    fullImg: "/logo.png", // וודא שיש לך צילום מסך של הדשבורד בתיקיית public
-    description: "פיתוח מערכת SaaS מקיפה לניהול מרפאות, המשלבת ניתוח נתונים מתקדם (BI), מעקב מדדים פיזיולוגיים וניהול יומן תורים חכם.",
+    title: "ClinicPro Enterprise",
+    fullImg: "/Clinic.png", // וודא שיש לך צילום מסך של הדשבורד בתיקיית public
+    description: " מערכת SaaS מקיפה לניהול מרפאות, המשלבת ניתוח נתונים מתקדם (BI), מעקב מדדים פיזיולוגיים וניהול יומן תורים חכם.",
     tasks: [
       "בניית ארכיטקטורת Full-Stack מבוססת Next.js 15 ו-TiDB Serverless לאחסון נתונים רפואיים.",
       "פיתוח דשבורד BI למנהלי מערכת הכולל ויזואליזציה של הכנסות לפי מרפאה ועומסי עבודה בזמן אמת.",
